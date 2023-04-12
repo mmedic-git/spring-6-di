@@ -14,7 +14,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
 
-        propertyInjectedController = new PropertyInjectedController();
+        propertyInjectedController = new PropertyInjectedController();                  //moramo eksplicitno instancirati  i PropertyInjectedController i  GreetingServiceImpl da bi test proradio uspješno
         propertyInjectedController.greetingService = new GreetingServiceImpl();
     }
 

@@ -1,16 +1,18 @@
 package guru.springframework.spring6di.controllers;
 
 import guru.springframework.spring6di.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
-public class SetterInjectedController {
+public class ConstructorInjectedController {
 
-    private GreetingService greetingService;
+    private final GreetingService greetingService;
 
-    public void setGreetingService(GreetingService greetingService) {  // koristimo setter
+    public ConstructorInjectedController(GreetingService greetingService) { // koristimo constructor
         this.greetingService = greetingService;
     }
 
     public String sayHello() {
+
         return greetingService.sayGreeting();
     }
 }

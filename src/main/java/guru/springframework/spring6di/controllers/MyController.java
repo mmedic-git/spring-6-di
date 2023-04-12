@@ -11,7 +11,7 @@ public class MyController {
 
     public MyController() {                               // u constructoru smo instancirali novi objekt tipa GreetingServiceImpl
         this.greetingService = new GreetingServiceImpl(); // ovo naravno radi, ali je nefleksibilno, jer sad MyController direktno instancira/ovisi o GreetingServiceImpl klasi. To ćemo zamijeniti kasnije sa IoC Dependency Injection-om.
-    }
+    }                                                     // U ovom primjeru nema nikakvog IoC-a, nego smo objekte instancirali direktno.
 
     public String sayHello() {
 

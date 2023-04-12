@@ -15,7 +15,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         setterInjectedController = new SetterInjectedController();
-        setterInjectedController.setGreetingService(new GreetingServiceImpl());
+        setterInjectedController.setGreetingService(new GreetingServiceImpl()); //ako iskomentiram ovu liniju, test će fail-ati, jer se objekt tipa GreetingServiceImpl neće kreirati, pa nećemo moći pozvati ni metodu objekta pod nazivom sayHello()
     }
 
     @Test
