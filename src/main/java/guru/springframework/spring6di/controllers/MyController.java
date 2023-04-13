@@ -13,6 +13,13 @@ public class MyController {
         this.greetingService = new GreetingServiceImpl(); // ovo naravno radi, ali je nefleksibilno, jer sad MyController direktno instancira/ovisi o GreetingServiceImpl klasi. To ćemo zamijeniti kasnije sa IoC Dependency Injection-om.
     }                                                     // U ovom primjeru nema nikakvog IoC-a, nego smo objekte instancirali direktno.
 
+    public void beforeInit() {
+        System.out.println("## - Before Init - Called by Bean Post Processor");
+    }
+
+    public void afterInit() {
+        System.out.println("## - After init called by Bean Post Processor");
+    }
     public String sayHello() {
 
         System.out.println("I'm in the controller");

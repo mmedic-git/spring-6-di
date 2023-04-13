@@ -7,7 +7,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles({"qa","EN"})
+@ActiveProfiles({"uat","EN"})
 @SpringBootTest
 class EnvironmentControllerTest {
 
